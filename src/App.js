@@ -51,8 +51,14 @@ class PassForm extends React.Component {
         if (event.target.password.value === event.target.confirmPass.value){
         alert('Passwords Match');
         }
-        else {alert('passwords do not match')}
+        else {
+            alert('passwords do not match')
+            event.target.password.value = ''
+            event.target.confirmPass.value = ''
+
+        }
         event.preventDefault();
+
     }
 
     render() {
